@@ -1,0 +1,26 @@
+applications:
+  - name: CA02719-rarconsumerservice
+    #buildpack: java8-bp428-t9-v1
+    #new buildpack below
+    buildpack: wf-java8-tomcat9-bp436-202102251301
+    # memory: 1024M
+    memory: 2048M
+    instances: 1
+    stack: cflinuxfs3
+    path: target/RARConsumerService-1.0.0.war
+    services:
+      - autoscaler-ca02719
+    env:
+      #email configuration
+      mail_host:
+      mail_host_port:
+      mail_protocol:
+      mail_defaultEncoding:
+      mongodb_url:
+      mongodb_username:
+      mongodb_password:
+      mongodb_database:
+      rarportal_base_url:
+      security_username:
+      security_password:
+      cronjob_master:

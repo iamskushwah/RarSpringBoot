@@ -1,0 +1,11 @@
+autoscaler:
+  -
+    name: autoscaler-ca02719
+    instance_limits:
+      max: ${services.autoscaler-ca02719.instance_limit_max}
+      min: ${services.autoscaler-ca02719.instance_limit_min}
+    rules:
+      - rule_type: cpu
+        threshold:
+          max: ${services.autoscaler-ca02719.cpu_threshold_max}
+          min: ${services.autoscaler-ca02719.cpu_threshold_min}
